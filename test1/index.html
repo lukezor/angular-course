@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app='LunchApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>The Lunch Checker App</title>
+  </head>
+  <body>
+    <h1>The Lunch Checker App</h1>
+    <div ng-controller='LunchController'>
+      Enter your lunch items below, separated by a comma if more than one: <br>
+      <div>
+        <input ng-model="items" ng-class="inputClass" type="text">
+        <span class="note">
+          We do not count empty items toward your total.
+        </span>
+        <br>
+        <button ng-click="evaluate()">Evaluate!</button>
+        <br>
+        <span ng-class="messageClass">
+          {{result}}
+        </span>
+      </div>
+    </div>
+  </body>
+  <style> 
+      body { 
+        font-size: 1.2em; 
+      }
+
+      .success {
+        color: green;
+      }
+
+      .success-border{
+        border: 2px solid green;
+      }
+
+      .error {
+        color: red;
+      }
+
+      .error-border{
+        border: 2px solid red;
+      }
+
+      .note {
+        font-size: 0.8em;
+      }
+    </style>
+</html>
