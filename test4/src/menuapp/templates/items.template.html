@@ -1,0 +1,7 @@
+<ul>
+  <li ng-repeat="item in $ctrl.items">
+    <strong>{{ item.name }}</strong> ({{ item.short_name }})
+    <p>{{ item.description }}</p>
+  </li>
+</ul>
+<p ng-if="!$ctrl.items.length">No items found for this category.</p>
